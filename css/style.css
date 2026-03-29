@@ -881,8 +881,128 @@ select.form-control option {
 
 /* Footer */
 .tech-footer {
+    background: #080808;
     border-top: 1px solid rgba(255, 255, 255, 0.05);
-    background: var(--black);
+}
+
+.footer-top {
+    padding: 80px 0 50px;
+}
+
+.footer-logo-text {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--gold);
+    display: block;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.footer-desc {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 30px;
+    line-height: 1.7;
+}
+
+.footer-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 25px;
+    position: relative;
+    padding-bottom: 12px;
+}
+
+.footer-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 30px;
+    height: 2px;
+    background: var(--gold);
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    transition: var(--transition);
+}
+
+.footer-links a:hover {
+    color: var(--gold);
+    text-decoration: none;
+    padding-left: 8px;
+}
+
+.footer-contact-info {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-contact-info li {
+    color: var(--text-muted);
+    margin-bottom: 15px;
+    display: flex;
+    gap: 15px;
+    font-size: 0.95rem;
+}
+
+.footer-contact-info i {
+    color: var(--gold);
+    font-size: 1.1rem;
+    width: 20px;
+}
+
+.footer-bottom {
+    padding: 30px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    background: #050505;
+}
+
+.copyright {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 0;
+}
+
+.footer-social {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+}
+
+.footer-social a {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(212, 175, 55, 0.1);
+    border-radius: 50%;
+    color: var(--white);
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+
+.footer-social a:hover {
+    background: var(--gold);
+    color: var(--black);
+    border-color: var(--gold);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px var(--gold-glow);
 }
 
 .gold-text {
