@@ -121,6 +121,7 @@ a:hover {
 
 .nav-logo {
     height: 40px;
+    animation: logo-heartbeat 3s infinite ease-in-out;
 }
 
 .logo-text {
@@ -360,6 +361,7 @@ a:hover {
     width: 100%;
     height: auto;
     filter: drop-shadow(0 0 15px var(--gold));
+    animation: logo-heartbeat 3s infinite ease-in-out;
 }
 
 .ripple {
@@ -440,6 +442,32 @@ a:hover {
     width: 60px;
     height: 4px;
     background: var(--gold);
+}
+
+@keyframes logo-heartbeat {
+    0% {
+        transform: scale(1);
+    }
+
+    10% {
+        transform: scale(1.1);
+    }
+
+    20% {
+        transform: scale(1);
+    }
+
+    30% {
+        transform: scale(1.1);
+    }
+
+    40% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
 
 .section-intro {
@@ -886,4 +914,80 @@ select.form-control option {
     }
 }
 
-@media (max-width: 767.98px) { .hero-section { height: auto; padding: 120px 0 60px; } .hero-title { font-size: 2.5rem; } .section-title { font-size: 2.2rem; } .values-grid { grid-template-columns: 1fr; } .contact-details p { font-size: 1rem; } .contact-details i { width: 40px; height: 40px; font-size: 1.2rem; } .social-links a { width: 45px; height: 45px; font-size: 1.2rem; } } @media (max-width: 575.98px) { .hero-title { font-size: 2rem; } .hero-subtitle { font-size: 1rem; } .section-title { font-size: 1.8rem; } .hero-btns { flex-direction: column; width: 100%; gap: 15px; } .hero-btns .btn { width: 100%; } .nav-logo { height: 30px; } .logo-text { font-size: 1.1rem; letter-spacing: 1px; } .service-card, .project-card, .blog-post { padding: 25px; } .section-header { margin-bottom: 30px !important; } }
+@media (max-width: 767.98px) {
+    .hero-section {
+        height: auto;
+        padding: 120px 0 60px;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .section-title {
+        font-size: 2.2rem;
+    }
+
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-details p {
+        font-size: 1rem;
+    }
+
+    .contact-details i {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+
+    .social-links a {
+        width: 45px;
+        height: 45px;
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .hero-btns {
+        flex-direction: column;
+        width: 100%;
+        gap: 15px;
+    }
+
+    .hero-btns .btn {
+        width: 100%;
+    }
+
+    .nav-logo {
+        height: 30px;
+    }
+
+    .logo-text {
+        font-size: 1.1rem;
+        letter-spacing: 1px;
+    }
+
+    .service-card,
+    .project-card,
+    .blog-post {
+        padding: 25px;
+    }
+
+    .section-header {
+        margin-bottom: 30px !important;
+    }
+}
