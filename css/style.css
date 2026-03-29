@@ -894,9 +894,17 @@ select.form-control option {
     font-size: 1.8rem;
     font-weight: 800;
     color: var(--gold);
-    display: block;
+    display: flex;
+    align-items: center;
+    gap: 15px;
     margin-bottom: 20px;
     letter-spacing: 1px;
+}
+
+.footer-logo {
+    height: 40px;
+    width: auto;
+    animation: logo-heartbeat 2s infinite ease-in-out;
 }
 
 .footer-desc {

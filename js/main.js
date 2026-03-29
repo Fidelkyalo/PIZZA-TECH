@@ -63,6 +63,26 @@
         return false;
     });
 
+    // Smooth scrolling for navigation links
+    $('.navbar-nav a[href^="#"]').on('click', function (e) {
+        var target = this.hash;
+        if (target) {
+            e.preventDefault();
+            $('html, body').stop().animate({
+                scrollTop: $(target).offset().top - 70 // Offset for fixed navbar
+            }, 800, 'easeInOutExpo');
+
+            // Update active link
+            $('.nav-link').removeClass('active');
+            $(this).addClass('active');
+
+            // Close mobile menu if open
+            if ($('.navbar-collapse').hasClass('show')) {
+                $('.navbar-collapse').collapse('hide');
+            }
+        }
+    });
+
     // Project carousel
     $(".project-carousel").owlCarousel({
         autoplay: true,
@@ -145,6 +165,16 @@
             $('#preloader').fadeOut('slow', function () {
                 $(this).remove();
                 $('body').removeClass('overflow-hidden');
+
+                // Smooth scroll to hash on load
+                if (window.location.hash) {
+                    var target = window.location.hash;
+                    if ($(target).length) {
+                        $('html, body').stop().animate({
+                            scrollTop: $(target).offset().top - 70
+                        }, 1000, 'easeInOutExpo');
+                    }
+                }
             });
         }, 4000); // 4 seconds
     });
