@@ -862,22 +862,28 @@ select.form-control option {
 }
 
 /* Responsive */
+@media (max-width: 1199.98px) {
+    .hero-title {
+        font-size: 3.5rem;
+    }
+}
+
 @media (max-width: 991.98px) {
     .hero-title {
         font-size: 3rem;
     }
 
-    .hero-visual {
-        display: none;
-    }
-}
-
-@media (max-width: 767.98px) {
-    .hero-title {
+    .section-title {
         font-size: 2.5rem;
     }
 
-    .section-title {
-        font-size: 2.2rem;
+    .hero-visual {
+        display: none;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
     }
 }
+
+@media (max-width: 767.98px) { .hero-section { height: auto; padding: 120px 0 60px; } .hero-title { font-size: 2.5rem; } .section-title { font-size: 2.2rem; } .values-grid { grid-template-columns: 1fr; } .contact-details p { font-size: 1rem; } .contact-details i { width: 40px; height: 40px; font-size: 1.2rem; } .social-links a { width: 45px; height: 45px; font-size: 1.2rem; } } @media (max-width: 575.98px) { .hero-title { font-size: 2rem; } .hero-subtitle { font-size: 1rem; } .section-title { font-size: 1.8rem; } .hero-btns { flex-direction: column; width: 100%; gap: 15px; } .hero-btns .btn { width: 100%; } .nav-logo { height: 30px; } .logo-text { font-size: 1.1rem; letter-spacing: 1px; } .service-card, .project-card, .blog-post { padding: 25px; } .section-header { margin-bottom: 30px !important; } }
