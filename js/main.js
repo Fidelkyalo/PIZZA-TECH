@@ -64,7 +64,7 @@
     });
 
     // Smooth scrolling for navigation links
-    $('.navbar-nav a[href^="#"]').on('click', function (e) {
+    $('a[href^="#"]:not([href="#"])').on('click', function (e) {
         var target = this.hash;
         if (target) {
             e.preventDefault();
