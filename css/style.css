@@ -1110,39 +1110,37 @@ select.form-control option {
         font-size: 1.2rem;
     }
 
-    /* Mobile Project Optimizations */
+    /* Mobile Project Optimizations - Vertical List like Services */
     .project-card {
-        margin: 5px !important;
+        margin: 0 0 30px 0 !important;
         border-radius: 10px;
         position: relative;
     }
 
     .project-img {
-        height: 160px !important;
+        height: 250px !important; /* Restore standard height */
     }
 
     .project-info {
-        position: absolute;
-        bottom: 0;
-        left: 0;
+        position: relative !important; /* Back to normal stack */
         width: 100%;
-        padding: 12px !important;
-        background: rgba(8, 8, 8, 0.85) !important;
-        backdrop-filter: blur(6px);
-        border-top: 1px solid rgba(212, 175, 55, 0.2);
+        padding: 25px !important;
+        background: #111 !important;
+        border-top: 1px solid rgba(212, 175, 55, 0.1);
+        backdrop-filter: none;
     }
 
     .project-info h4 {
-        font-size: 0.9rem !important;
-        margin-bottom: 5px !important;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
+        font-size: 1.2rem !important;
+        margin-bottom: 10px !important;
+        white-space: normal;
+        overflow: visible;
+        text-overflow: clip;
     }
 
     .view-project {
-        margin-top: 0 !important;
-        font-size: 0.75rem !important;
+        margin-top: 10px !important;
+        font-size: 0.9rem !important;
     }
 }
 
