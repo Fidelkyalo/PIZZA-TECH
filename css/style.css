@@ -249,6 +249,18 @@ a:hover {
     color: var(--gold);
 }
 
+.btn-outline-primary {
+    background-color: transparent;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--gold);
+    color: var(--black);
+    box-shadow: 0 0 20px var(--gold-glow);
+}
+
 /* Preloader */
 #preloader {
     position: fixed;
