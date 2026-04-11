@@ -1052,6 +1052,28 @@ select.form-control option {
     .hero-subtitle {
         font-size: 1.1rem;
     }
+
+    .navbar-collapse {
+        background: rgba(8, 8, 8, 0.98);
+        border: 1px solid rgba(212, 175, 55, 0.1);
+        margin-top: 15px;
+        padding: 20px;
+        border-radius: 10px;
+        backdrop-filter: blur(10px);
+    }
+
+    .navbar-nav .nav-link {
+        padding: 12px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .navbar-nav .nav-link:last-child {
+        border-bottom: none;
+    }
+
+    .nav-bar {
+        padding: 10px 0;
+    }
 }
 
 @media (max-width: 767.98px) {
@@ -1129,6 +1151,24 @@ select.form-control option {
 
     .section-header {
         margin-bottom: 30px !important;
+    }
+
+    .footer-top {
+        padding: 50px 0 30px;
+        text-align: center;
+    }
+
+    .footer-logo-text {
+        justify-content: center;
+    }
+
+    .footer-title::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .footer-contact-info li {
+        justify-content: center;
     }
 }
 
