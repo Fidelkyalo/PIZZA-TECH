@@ -83,32 +83,7 @@
         }
     });
 
-    // Project carousel
-    $(".project-carousel").owlCarousel({
-        autoplay: true,
-        smartSpeed: 1000,
-        margin: 25,
-        loop: true,
-        center: true,
-        dots: false,
-        nav: true,
-        navText: [
-            '<i class="fa fa-chevron-left"></i>',
-            '<i class="fa fa-chevron-right"></i>'
-        ],
-        responsive: {
-            0: {
-                items: 2,
-                margin: 15
-            },
-            768: {
-                items: 2
-            },
-            992: {
-                items: 3
-            }
-        }
-    });
+
 
     // Scroll Reveal Animations
     const observerOptions = {
@@ -164,7 +139,9 @@
         const preloader = $('#preloader');
         if (!preloader.length) return;
 
-        if (sessionStorage.getItem('preloaderShown')) {
+        const isReload = performance.getEntriesByType("navigation")[0]?.type === "reload";
+
+        if (sessionStorage.getItem('preloaderShown') && !isReload) {
             preloader.remove();
             $('body').removeClass('overflow-hidden');
             handleHashScroll();

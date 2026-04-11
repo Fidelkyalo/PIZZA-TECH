@@ -29,9 +29,9 @@
         </div>
     </div>
     <script>
-        if (sessionStorage.getItem('preloaderShown')) {
-            var preloader = document.getElementById('preloader');
-            if (preloader) preloader.style.display = 'none';
+        const isReload = performance.getEntriesByType("navigation")[0]?.type === "reload";
+        if (sessionStorage.getItem('preloaderShown') && !isReload) {
+            document.getElementById('preloader').style.display = 'none';
             document.body.classList.remove('overflow-hidden');
         }
     </script>
