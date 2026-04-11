@@ -1142,6 +1142,26 @@ select.form-control option {
         margin-top: 10px !important;
         font-size: 0.9rem !important;
     }
+
+    /* Force Services to be a List (not slider) on mobile */
+    .service-carousel.owl-carousel {
+        display: block !important;
+    }
+    .service-carousel .owl-stage-outer {
+        overflow: visible !important;
+    }
+    .service-carousel .owl-stage {
+        display: block !important;
+        width: 100% !important;
+        transform: none !important;
+    }
+    .service-carousel .owl-item {
+        width: 100% !important;
+        margin-bottom: 25px;
+    }
+    .service-carousel .owl-nav, .service-carousel .owl-dots {
+        display: none !important;
+    }
 }
 
 @media (max-width: 575.98px) {
