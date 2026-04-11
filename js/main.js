@@ -158,26 +158,39 @@
         }
     });
 
-    // Preloader Timeout
+    // Preloader Logic
     $(window).on('load', function () {
+        const preloader = $('#preloader');
+        if (!preloader.length) return;
+
+        if (sessionStorage.getItem('preloaderShown')) {
+            preloader.remove();
+            $('body').removeClass('overflow-hidden');
+            handleHashScroll();
+            return;
+        }
+
         initBinaryRain();
         setTimeout(function () {
-            $('#preloader').fadeOut('slow', function () {
+            preloader.fadeOut('slow', function () {
                 $(this).remove();
                 $('body').removeClass('overflow-hidden');
-
-                // Smooth scroll to hash on load
-                if (window.location.hash) {
-                    var target = window.location.hash;
-                    if ($(target).length) {
-                        $('html, body').stop().animate({
-                            scrollTop: $(target).offset().top - 70
-                        }, 1000, 'easeInOutExpo');
-                    }
-                }
+                sessionStorage.setItem('preloaderShown', 'true');
+                handleHashScroll();
             });
-        }, 4000); // 4 seconds
+        }, 4000); 
     });
+
+    function handleHashScroll() {
+        if (window.location.hash) {
+            var target = window.location.hash;
+            if ($(target).length) {
+                $('html, body').stop().animate({
+                    scrollTop: $(target).offset().top - 70
+                }, 1000, 'easeInOutExpo');
+            }
+        }
+    }
 
     function initBinaryRain() {
         const canvas = document.getElementById('binary-canvas');
