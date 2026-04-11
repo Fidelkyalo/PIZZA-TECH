@@ -1109,6 +1109,41 @@ select.form-control option {
         height: 45px;
         font-size: 1.2rem;
     }
+
+    /* Mobile Project Optimizations */
+    .project-card {
+        margin: 5px !important;
+        border-radius: 10px;
+        position: relative;
+    }
+
+    .project-img {
+        height: 160px !important;
+    }
+
+    .project-info {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 12px !important;
+        background: rgba(8, 8, 8, 0.85) !important;
+        backdrop-filter: blur(6px);
+        border-top: 1px solid rgba(212, 175, 55, 0.2);
+    }
+
+    .project-info h4 {
+        font-size: 0.9rem !important;
+        margin-bottom: 5px !important;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .view-project {
+        margin-top: 0 !important;
+        font-size: 0.75rem !important;
+    }
 }
 
 @media (max-width: 575.98px) {
