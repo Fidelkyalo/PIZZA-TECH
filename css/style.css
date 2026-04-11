@@ -1131,3 +1131,13 @@ select.form-control option {
         margin-bottom: 30px !important;
     }
 }
+
+.footer-logo-link {
+    transition: var(--transition);
+    display: inline-block;
+}
+
+.footer-logo-link:hover {
+    opacity: 0.8;
+    transform: translateY(-2px);
+}
