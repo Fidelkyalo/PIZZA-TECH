@@ -1143,25 +1143,49 @@ select.form-control option {
         font-size: 0.9rem !important;
     }
 
-    /* Force Services to be a List (not slider) on mobile */
-    .service-carousel.owl-carousel {
+    /* Force Projects to be a List (not slider) on mobile */
+    .project-carousel.owl-carousel {
         display: block !important;
     }
-    .service-carousel .owl-stage-outer {
+    .project-carousel .owl-stage-outer {
         overflow: visible !important;
     }
-    .service-carousel .owl-stage {
+    .project-carousel .owl-stage {
         display: block !important;
         width: 100% !important;
         transform: none !important;
     }
-    .service-carousel .owl-item {
+    .project-carousel .owl-item {
         width: 100% !important;
         margin-bottom: 25px;
     }
-    .service-carousel .owl-nav, .service-carousel .owl-dots {
+    .project-carousel .owl-nav, .project-carousel .owl-dots {
         display: none !important;
     }
+}
+
+/* Side Navigation Arrows for Carousel on Big Screens */
+.project-carousel {
+    position: relative;
+    padding: 0 50px;
+}
+
+.project-carousel .owl-nav .owl-prev {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem !important;
+    color: var(--gold) !important;
+}
+
+.project-carousel .owl-nav .owl-next {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem !important;
+    color: var(--gold) !important;
 }
 
 @media (max-width: 575.98px) {

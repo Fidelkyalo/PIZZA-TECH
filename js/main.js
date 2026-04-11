@@ -83,13 +83,13 @@
         }
     });
 
-    // Service carousel
-    $(".service-carousel").owlCarousel({
+    // Project carousel
+    $(".project-carousel").owlCarousel({
         autoplay: true,
         smartSpeed: 1000,
         margin: 25,
         loop: true,
-        center: false,
+        center: true,
         dots: false,
         nav: true,
         navText: [
